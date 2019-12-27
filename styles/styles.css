@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
+@viewport {
+    width: device-width;
+    zoom: 1;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Inconsolata', monospace;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+footer, header, nav, section {
+    display: block;
+}
+
+#strip {
+    min-height: 5px;
+    background-color: #ee5260;
+}
+
+header {
+    width: 700px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    border-bottom: #e6e6e6 dashed 1px;
+}
+
+#title {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+nav a {
+    font-size: 1em;
+    font-weight: bold;
+    color: #ee5260;
+    float: right;
+    margin-left: 35px;
+}
+
+a {
+    text-decoration: none;
+}
+
+div h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#card {
+    width: 400px;
+    height: 120px;
+    /*padding-top: 5px;*/
+    margin-bottom: 40px;
+    border: solid black 2.2px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    box-shadow: 9px 9px black;
+}
+
+
+
+#container {
+    background-color: #fafafa;
+    flex: 1;
+    padding-bottom: 60px;
+}
+
+#sketch-holder {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+}
+
+#footer-container {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+ul {
+    width: 120px;
+    margin: auto;
+    padding: 0;
+    transition: 0.2s;
+}
+
+ul:hover>li {
+    opacity: 0.5;
+}
+
+ul li {
+    display: inline-block;
+}
+
+li {
+    display: inline-block;
+    ;
+    transition: 0.2s;
+}
+
+ul:hover>li:hover {
+    opacity: 1;
+    transform: translateY(-2.5px);
+}
+
+#mail {
+    font-weight: bold;
+    color: white;
+}
+
+li a {
+    margin: 0 1px;
+}
+
+form button{
+    background: none;
+    border: none;
+    
+}
+
+/***********************************SCROLLING TEXT**************************************/
+.defileParent {
+	display: block;
+	margin: 1.8em auto;
+	overflow: hidden;
+	position: relative;
+	table-layout: fixed;
+	width: 100%;
+}
+
+.defile {
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 1.35em;
+    font-family: 'Source Code Pro', monospace;
+
+	display:block;
+	-webkit-animation:linear marqueelike 20s infinite ;
+	-moz-animation:linear marqueelike 20s infinite ;
+	-o-animation:linear marqueelike 20s infinite ;
+	-ms-animation:linear marqueelike 20s infinite ;
+	animation:linear marqueelike 20s infinite ;
+	margin-left:-100%;
+	padding:0 5px;
+	text-align:left;
+	height:25px;
+}
+
+.defile:after {
+	content:attr(data-text);
+	position:absolute;
+	white-space:nowrap;
+	padding-left:10px;
+}
+
+@-webkit-keyframes marqueelike {
+	0%, 100% {margin-left:0;}
+	99.99% {margin-left:-100%;}
+ }
+@-moz-keyframes marqueelike {
+	0%, 100% {margin-left:0;}
+	99.99% {margin-left:-100%;}
+ }
+@-o-keyframes marqueelike {
+	0%, 100% {margin-left:0;}
+	99.99% {margin-left:-100%;}
+ }
+@-ms-keyframes marqueelike {
+	0%, 100% {margin-left:0;}
+	99.99% {margin-left:-100%;}
+ }
+@keyframes marqueelike {
+	0%, 100% {margin-left:0;}
+	99.99% {margin-left:-100%;}
+ }
+
+
+ @media all and (max-width: 680px) {
+    .defileParent {
+        display: block;
+        margin: 1.8em auto;
+        overflow: hidden;
+        position: relative;
+        table-layout: fixed;
+        width: 100%;
+    }
+    
+    .defile {
+        white-space: nowrap;
+        font-weight: bold;
+        font-size: 1em;
+        font-family: 'Source Code Pro', monospace;
+
+        display:block;
+        -webkit-animation:linear marqueelike 15s infinite ;
+        -moz-animation:linear marqueelike 15s infinite ;
+        -o-animation:linear marqueelike 15s infinite ;
+        -ms-animation:linear marqueelike 15s infinite ;
+        animation:linear marqueelike 15s infinite ;
+        margin-left:-100%;
+        padding:0 5px;
+        text-align:left;
+        height:25px;
+    }
+    }
+
+/***************************************************************************************/
+/***************************************WORKS*******************************************/
+
+
+article {
+    border: 1px solid black;
+    margin-top: 15px;
+    height: 170px;
+    padding: 10px;
+    margin-bottom: 15px;
+    
+}
+
+article img {
+    width: auto;
+    height: 100%;
+    display: inline-block;
+}
+
+article div {
+    display: inline-block;
+    vertical-align: top;
+    height:100%;
+    max-width: 500px;
+    
+}
+
+article a {
+    text-decoration: underline;
+    width: 200px;
+    display: block;
+}
+
+
+
+article span {
+    font-size: 12px;
+    float: right;
+    border: 1px solid;
+    padding: 2px 2px 2px 2px;
+    border-radius: 2px;
+    line-height: 10px;
+    margin-left: 5px;
+    
+    
+}
+
+.java {
+    color: #ee5260;
+}
+
+.p5js {
+    color: #0C7C59;
+}
+
+.processing {
+    color: #004E89;
+}
+
+.mysql{
+    color : #89D0E5;
+}
+
+.php{
+    color:#0B5EBC;
+}
+.html-css{
+    color:#E86226;
+}
+
+.js{
+    color:#F0D91D;
+}
+
+.nodejs{
+    color:#7FC728;
+}
+
+/********************************************************************************/
+
+@media all and (max-width: 750px) {
+    header {
+        width: 200px;
+    }
+    #content {
+        width: auto;
+        margin: 20px;
+    }
+    span {
+        display: block;
+        text-align: center;
+    }
+    nav a {
+        text-align: center;
+        padding-top: 15px;
+    }
+    #about {
+        margin-right: 41.5px;
+    }
+    /*WORKS*/
+    article {
+        width: 380px;
+        height: auto;
+        text-justify: auto;
+        margin: auto;
+        padding: 20px;
+    }
+    article img {
+        width: 100%;
+        height: auto;
+    }
+    article p {
+        margin: auto;
+        padding-bottom: 15px;
+    }
+    article a {
+        float: left;
+    }
+    article span {
+        float: right;
+        margin-left: 5px;
+    }
+}
+
+@media all and (max-width: 450px) {
+    #card {
+        width: 90%;
+    }
+    article {
+        width: 90%;
+        padding: 10px;
+        ;
+    }
+    article img {
+        height: auto;
+    }
+}
