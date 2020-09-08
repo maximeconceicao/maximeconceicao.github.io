@@ -28,26 +28,47 @@ footer, header, nav, section {
     background-color: #ee5260;
 }
 
-header {
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    flex-wrap: wrap;
     width: 700px;
     margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     border-bottom: #e6e6e6 dashed 1px;
 }
 
-#title {
+nav div{
+    padding-left: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+nav div span{
+    visibility: hidden;
+}
+
+.current{
+    visibility: visible;
+    color: #ee5260;
+}
+
+.title {
     font-size: 1.1em;
     font-weight: bold;
+    margin-right: auto;
 }
 
 nav a {
     font-size: 1em;
     font-weight: bold;
     color: #ee5260;
-    float: right;
-    margin-left: 35px;
+    
 }
 
 a {
@@ -59,10 +80,9 @@ div h1 {
     font-weight: bold;
 }
 
-#card {
+.card {
     width: 400px;
     height: 120px;
-    /*padding-top: 5px;*/
     margin-bottom: 40px;
     border: solid black 2.2px;
     margin-top: 30px;
@@ -76,7 +96,6 @@ div h1 {
 
 #container {
     background-color: #fafafa;
-    flex: 1;
     padding-bottom: 60px;
 }
 
@@ -88,7 +107,7 @@ div h1 {
     margin-right: auto;
 }
 
-#content {
+.content {
     width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -247,6 +266,10 @@ article {
     height: 170px;
     padding: 10px;
     margin-bottom: 15px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
     
 }
 
@@ -315,13 +338,27 @@ article span {
     color:#7FC728;
 }
 
+.threejs{
+    color:#AEEAB4;
+}
+
 /********************************************************************************/
 
 @media all and (max-width: 750px) {
-    header {
+    nav {
         width: 200px;
+        justify-content: space-between;
     }
-    #content {
+
+    .title{
+        width: 100%;
+    }
+
+    nav div{
+        padding: 0;
+    }
+
+    .content {
         width: auto;
         margin: 20px;
     }
@@ -342,6 +379,8 @@ article span {
         height: auto;
         text-justify: auto;
         margin: auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
         padding: 20px;
     }
     article img {
@@ -362,7 +401,7 @@ article span {
 }
 
 @media all and (max-width: 450px) {
-    #card {
+    .card {
         width: 90%;
     }
     article {
