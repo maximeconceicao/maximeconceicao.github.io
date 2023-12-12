@@ -25,7 +25,7 @@
         <div class="project__links">
           <div v-for="(link, index) in project.links" :key="index">
             <i class="bi-signpost-fill"></i>
-            <a :href="link.url">
+            <a target="_blank" :href="link.url">
               {{ link.name }}
             </a>
           </div>

@@ -33,7 +33,7 @@ const state = {
       links: [
         {
           name: "Sweet Portfolio on Github",
-          url: "https://www.spotify.com",
+          url: "https://github.com/maximeconceicao/maximeconceicao.github.io",
         },
         {
           name: "Sweet Portfolio Website",
