@@ -7,6 +7,26 @@ const hiddenMessages =
 const state = {
   projects: [
     {
+      name: "blog",
+      title: "BLOG",
+      subtitle: "A little blog about guitar",
+      description:
+        "Besides web development, I'm learning guitar. I created this Astro.js blog as a sort of logbook for my musical journey.",
+      mediaUrl: require("../../assets/images/blog.jpg"),
+      mediaType: "image",
+      tags: [],
+      links: [
+        {
+          name: "Blog Website",
+          url: "https://maximeconceicao.github.io/blog",
+        },
+        {
+          name: "Blog on Github",
+          url: "https://github.com/maximeconceicao/blog",
+        },
+      ],
+    },
+    {
       name: "reading-room",
       title: "READING ROOM",
       subtitle: "A tiny voice-controlled <br> note-taking app",
@@ -47,7 +67,7 @@ const state = {
       title: "PROCESSING",
       subtitle: "First steps in the world <br> of creative coding",
       description:
-        "I started my creative coding journey by learning basic concepts and exploring things through Processing. You can find some of my old sketches on OpenProcessing.org.",
+        "I started creative coding by learning basic concepts and exploring things through Processing. You can find some of my old sketches on OpenProcessing.org.",
       mediaUrl: require("../../assets/images/waves.png"),
       mediaType: "image",
       links: [
@@ -71,7 +91,6 @@ const state = {
 };
 
 const getters = {
-  // TODO : fix these any type
   getProjectByName:
     (state: { projects: Project[] }) => (projectName: string) => {
       return state.projects.find(

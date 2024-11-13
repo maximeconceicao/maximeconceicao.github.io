@@ -6,7 +6,7 @@
       </div>
       <div class="about__text">
         <h1 class="flap">Hey I'm Max</h1>
-        <h2 class="flap">And I try my best</h2>
+        <h2 class="flap">And I'm a Web Dev</h2>
 
         <div class="about__buttons">
           <a href="https://github.com/maximeconceicao"
