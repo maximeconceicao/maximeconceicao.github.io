@@ -2,6 +2,7 @@
 import type { Project } from "@/lib/types";
 import { ArrowBigRight, Milestone } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
+import ProjectCardMeta from "./ProjectCardMeta.astro";
 
 const { project, index } = Astro.props as {
   project: Project;
@@ -17,11 +18,7 @@ const { project, index } = Astro.props as {
           className="group relative aspect-[16/9] w-full items-center justify-center transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-lg hover:cursor-pointer active:scale-98 active:animate-[bounce-click_0.3s_ease]"
           style={{ backgroundColor: `var(--${project.color})` }}
         >
-          <p
-            class="absolute right-3 top-3 rounded-full bg-white/10 px-3 py-0.5 text-sm text-white transition-all duration-300 ease-in-out opacity-100 -translate-y-0 group-hover:opacity-0 group-hover:-translate-y-2"
-          >
-            {project.period}
-          </p>
+          <ProjectCardMeta period={project.period} tags={project.tags} />
 
           <CardContent className="flex items-center justify-center">
             <div class="relative flex items-center gap-2">
@@ -34,16 +31,6 @@ const { project, index } = Astro.props as {
               />
             </div>
           </CardContent>
-
-          <div
-            class="absolute left-3 bottom-3 text-sm flex flex-row gap-2 text-white transition-all duration-300 ease-in-out opacity-100 translate-y-0 group-hover:opacity-0 group-hover:translate-y-2"
-          >
-            {
-              project.tags?.map((tag) => (
-                <p class="rounded-full bg-white/10 px-3 py-0.5">{tag}</p>
-              ))
-            }
-          </div>
         </Card>
       </a>
 
