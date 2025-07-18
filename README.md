@@ -2,7 +2,7 @@
 
 ![Portfolio Banner](./public/images/portfolio.png)
 
-Welcome to my **portfolio**, a curated collection of personal projects as a full stack JavaScript/TypeScript developer.
+Welcome to my **portfolio**, a curated collection of personal projects as a developer.
 
 🔗 **Live site**: [https://maximeconceicao.github.io](https://maximeconceicao.github.io)
 
