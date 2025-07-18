@@ -1,0 +1,12 @@
+---
+const { href, Icon } = Astro.props;
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="text-xl transition-transform transform group-hover:opacity-50 hover:opacity-100 hover:-translate-y-1"
+>
+  <Icon />
+</a>

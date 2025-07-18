@@ -1,0 +1,59 @@
+---
+import {
+  BookMarked,
+  Gamepad2,
+  Github,
+  Instagram,
+  Linkedin,
+  Mail,
+  Music,
+} from "lucide-react";
+import SocialLink from "./SocialLink.astro";
+---
+
+<header
+  class="flex w-full h-full md:fixed md:h-screen md:top-0 md:px-6 md:w-[300px]"
+>
+  <div class="m-auto flex flex-col items-center">
+    <div class="mb-4">
+      <img src="/images/me-dark.png" alt="" class="block dark:hidden w-32" />
+      <img src="/images/me-light.png" alt="" class="hidden dark:block w-32" />
+    </div>
+    <div class="w-full text-center">
+      <h1 class="m-0 text-2xl font-bold">Salut moi c'est Max</h1>
+      <h2 class="m-0 text-xl font-normal">Et ça c'est mon portfolio</h2>
+
+      <div class="w-[180px] mx-auto my-5 group">
+        <div class="flex flex-wrap justify-between mb-3">
+          <SocialLink href="https://github.com/maximeconceicao" Icon={Github} />
+          <SocialLink
+            href="https://www.instagram.com/maximeconceicao/"
+            Icon={Instagram}
+          />
+          <SocialLink
+            href="https://fr.linkedin.com/in/maxime-conceicao-6b8505197"
+            Icon={Linkedin}
+          />
+          <SocialLink
+            href="https://fr.linkedin.com/in/maxime-conceicao-6b8505197"
+            Icon={Gamepad2}
+          />
+        </div>
+
+        <div class="flex flex-wrap justify-between">
+          <div></div>
+          <SocialLink
+            href="https://open.spotify.com/user/maxime.conceicao"
+            Icon={Music}
+          />
+          <SocialLink
+            href="https://www.goodreads.com/user/show/149199736-maxime-conceicao"
+            Icon={BookMarked}
+          />
+          <SocialLink href="mailto: maxime.conceicao@gmail.com" Icon={Mail} />
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

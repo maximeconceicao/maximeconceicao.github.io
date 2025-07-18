@@ -1,0 +1,78 @@
+---
+import type { Project } from "@/lib/types";
+import { ArrowBigRight, Milestone } from "lucide-react";
+import { Card, CardContent } from "./ui/card";
+
+const { project, index } = Astro.props as {
+  project: Project;
+  index: number;
+};
+---
+
+<section class="w-full">
+  <li class="list-none mt-6 first:mt-0">
+    <article class="p-6">
+      <a target="_blank" href={project.links[0].url}>
+        <Card
+          className="group relative aspect-[16/9] w-full items-center justify-center transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-lg hover:cursor-pointer active:scale-98 active:animate-[bounce-click_0.3s_ease]"
+          style={{ backgroundColor: `var(--${project.color})` }}
+        >
+          <p
+            class="absolute right-3 top-3 rounded-full bg-white/10 px-3 py-0.5 text-sm text-white transition-all duration-300 ease-in-out opacity-100 -translate-y-0 group-hover:opacity-0 group-hover:-translate-y-2"
+          >
+            {project.period}
+          </p>
+
+          <CardContent className="flex items-center justify-center">
+            <div class="relative flex items-center gap-2">
+              <project.icon
+                className="h-15 w-15 text-white transform transition-all duration-300 ease-in-out group-hover:-translate-x-4"
+              />
+              <ArrowBigRight
+                fill="white"
+                className="absolute left-10 ml-0 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:ml-2 text-white h-7 w-7"
+              />
+            </div>
+          </CardContent>
+
+          <div
+            class="absolute left-3 bottom-3 text-sm flex flex-row gap-2 text-white transition-all duration-300 ease-in-out opacity-100 translate-y-0 group-hover:opacity-0 group-hover:translate-y-2"
+          >
+            {
+              project.tags?.map((tag) => (
+                <p class="rounded-full bg-white/10 px-3 py-0.5">{tag}</p>
+              ))
+            }
+          </div>
+        </Card>
+      </a>
+
+      <div class="mt-4">
+        <h2 class="font-light text-2xl font-semibold">
+          {index} | {project.title}
+        </h2>
+
+        <h3 class="italic break-words mt-4 font-semibold text-lg">
+          {project.subtitle}
+        </h3>
+
+        <p class="text-left mt-4">
+          {project.description}
+        </p>
+
+        <div class="flex flex-col underline mt-4 space-y-2">
+          {
+            project.links.map((link) => (
+              <div class="flex items-center">
+                <Milestone className="h-4 w-4 mr-2" fill="var(--foreground)" />
+                <a target="_blank" href={link.url} class="hover:opacity-80">
+                  {link.name}
+                </a>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </article>
+  </li>
+</section>

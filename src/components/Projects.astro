@@ -1,0 +1,16 @@
+---
+import { projects } from "@/content/projects";
+import ProjectCard from "./ProjectCard.astro";
+---
+
+<section class="w-full md:ml-80">
+  <div>
+    <ul class="grid grid-cols-1 gap-x-11 p-0">
+      {
+        projects.map((project, index) => (
+          <ProjectCard project={project} index={index} />
+        ))
+      }
+    </ul>
+  </div>
+</section>
