@@ -8,7 +8,7 @@ interface GameCellsProps {
 
 export const GameCells: React.FC<GameCellsProps> = ({ playerSequence }) => {
   return (
-    <div className="flex flex-wrap flex-row w-full my-5 mx-auto justify-center">
+    <div className="flex flex-wrap flex-row w-full my-5 mx-auto justify-center h-28">
       {playerSequence.map((shape, index) => (
         <GameCell key={index} shape={shape} lineBreak={(index + 1) % 4 === 0} />
       ))}
