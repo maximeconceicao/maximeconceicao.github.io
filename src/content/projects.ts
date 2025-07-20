@@ -72,7 +72,7 @@ export const projects: Project[] = [
     title: "PORTFOLIO",
     subtitle: "Comme un air de déjà-vu",
     description:
-      "J'espère que vous apprécierez parcourir ce portfolio. Au fait, avez-vous trouvé tous les easter eggs ?",
+      "J'espère que vous appréciez parcourir ce portfolio. Au fait, avez-vous trouvé tous les easter eggs ?",
     icon: BriefcaseBusiness,
     color: "chart-4",
     period: "2025",
