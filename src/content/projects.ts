@@ -1,6 +1,7 @@
 import type { Project } from "@/lib/types";
 import {
   BriefcaseBusiness,
+  Guitar,
   Origami,
   Palette,
   Sprout,
@@ -47,6 +48,27 @@ export const projects: Project[] = [
       {
         name: "Digital Garden sur Github",
         url: "https://github.com/maximeconceicao/temple-of-reflection",
+      },
+    ],
+  },
+  {
+    name: "fretzen",
+    title: "FRETZEN",
+    subtitle: "Apprendre le manche de guitare en jouant",
+    description:
+      "FretZen est un petit jeu web pour mémoriser les notes du manche de guitare, réalisé avec Claude Code.",
+    icon: Guitar,
+    color: "chart-6",
+    period: "2026",
+    tags: ["Web Game", "Phaser", "TypeScript"],
+    links: [
+      {
+        name: "Jouer à FretZen",
+        url: "https://maximeconceicao.github.io/fretzen/",
+      },
+      {
+        name: "FretZen sur Github",
+        url: "https://github.com/maximeconceicao/fretzen",
       },
     ],
   },
