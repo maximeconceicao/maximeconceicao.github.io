@@ -1,6 +1,7 @@
 import type { Project } from "@/lib/types";
 import {
   BriefcaseBusiness,
+  Ear,
   Guitar,
   Origami,
   Palette,
@@ -69,6 +70,27 @@ export const projects: Project[] = [
       {
         name: "FretZen sur Github",
         url: "https://github.com/maximeconceicao/fretzen",
+      },
+    ],
+  },
+  {
+    name: "terval",
+    title: "TERVAL",
+    subtitle: "Entraîner son oreille aux intervalles",
+    description:
+      "Terval est un jeu web minimaliste d'entraînement auditif à la reconnaissance d'intervalles, réalisé avec Claude Code.",
+    icon: Ear,
+    color: "chart-7",
+    period: "2026",
+    tags: ["Web Game", "TypeScript", "Web Audio"],
+    links: [
+      {
+        name: "Jouer à Terval",
+        url: "https://maximeconceicao.github.io/terval/",
+      },
+      {
+        name: "Terval sur Github",
+        url: "https://github.com/maximeconceicao/terval",
       },
     ],
   },
