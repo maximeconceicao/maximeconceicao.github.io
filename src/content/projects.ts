@@ -82,7 +82,7 @@ export const projects: Project[] = [
     icon: Ear,
     color: "chart-7",
     period: "2026",
-    tags: ["Web Game", "TypeScript", "Web Audio"],
+    tags: ["Web Game", "Web Audio"],
     links: [
       {
         name: "Jouer à Terval",
@@ -103,8 +103,12 @@ export const projects: Project[] = [
     icon: Origami,
     color: "chart-3",
     period: "2025 - auj.",
-    tags: ["Mobile App", "React Native"],
+    tags: ["PWA", "React"],
     links: [
+      {
+        name: "Zendō",
+        url: "https://maximeconceicao.github.io/zendo",
+      },
       {
         name: "Zendō sur Github",
         url: "https://github.com/maximeconceicao/zendo",
